@@ -1,7 +1,8 @@
 <template>
     <div>
         <div v-for="item in items" :key="item">
-            <div class="items">
+            <div v-if="status==='All'||status==='Active'&&item.active===false||status==='Complete'&&item.active===true" class="item">
+
                 {{item.id}}.<input type="checkbox" v-model="item.active"/>
 
                 <label :class="{finishItem:item.active}" @dblclick="editItem(item.id,item.name)">
@@ -13,6 +14,13 @@
 
             </div>
         </div>
+        <br/>
+        <div class="itemstatus">
+            <button class="btnState" @click="changeStatus('All')" >All</button>&nbsp;&nbsp;
+            <button class="btnState" @click="changeStatus('Active')" >Active</button>&nbsp;&nbsp;
+            <button class="btnState" @click="changeStatus('Complete')" >Complete</button>
+        </div>
+
         
     </div>
 </template>
@@ -25,9 +33,15 @@
             return {
                 items:itemList.items,
                 status:itemList.status
+               
             }
         },
         methods: {
+
+            changeStatus(state) {
+                this.status=state;
+                itemList.status=state;
+            },
             editItem(id,name){
                 this.items[id-1].isEdit=true;
             },

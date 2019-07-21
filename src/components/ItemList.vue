@@ -7,7 +7,7 @@
         name: "itemList",
         items:[
         ],
-        status: 0
+        status: "All"
     }
 </script>
 

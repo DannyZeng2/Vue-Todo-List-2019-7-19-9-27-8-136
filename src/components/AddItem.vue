@@ -1,8 +1,8 @@
 <template>
     <div>
-        <div>
+        <div >
         <input id="additem" v-model="todoItem" type="text">
-        <button id="addBtn" @click="add">add</button>
+        <button id="addBtn" @click="add">Add</button>
         </div>
     </div>
 </template>
@@ -13,8 +13,7 @@
         name: "AddItem",
         data(){
             return {
-                todoItem:""
-               
+                todoItem:"",
             }
         },
         methods:{
