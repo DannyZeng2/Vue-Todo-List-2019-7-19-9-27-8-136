@@ -2,7 +2,7 @@
     <div>
         <div>
         <input id="additem" v-model="todoItem" type="text">
-        <button id="addBtn" @click="add">Add</button>
+        <button id="addBtn" @click="add">add</button>
         </div>
     </div>
 </template>
@@ -20,7 +20,7 @@
         methods:{
                 add(){
                     let id = itemList.items.length+1;
-                    let objs={"id":id,"name":this.todoItem,"active":false,"editFlag":true};
+                    let objs={"id":id,"name":this.todoItem,"active":false,"isEdit":false};
                     itemList.items.push(objs);
                     this.todoItem="";
                 }
@@ -29,5 +29,5 @@
 </script>
 
 <style scoped>
-
+  @import '../style.css';
 </style>

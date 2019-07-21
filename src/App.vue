@@ -1,19 +1,22 @@
 <template>
   <div id="app">
-    <div class="mainbox">
+    <div class="rootdiv">
       <h2>Jquery To Do List</h2>
       <p>Simple Todo List with adding and filter by diff status</p>
       <AddItem></AddItem>
+      <Item></Item>
     </div>
   </div>
 </template>
 
 <script>
 import AddItem from "./components/AddItem";
+import Item from "./components/Item";
 export default {
   name: 'app',
   components: {
-      AddItem
+      AddItem,
+      Item
   }
 }
 </script>
