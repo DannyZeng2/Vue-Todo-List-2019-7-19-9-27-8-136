@@ -1,7 +1,3 @@
-.changeCheckbox{
-    text-decoration:line-through
-}
-
 .rootdiv{
     text-align: left;
     padding:10px 10px 10px 20px;
@@ -26,6 +22,11 @@
     height:30px;
   
 }
+
+.finishItem{
+    text-decoration:line-through
+}
+
 
 .itemstatus{
     text-align: right;

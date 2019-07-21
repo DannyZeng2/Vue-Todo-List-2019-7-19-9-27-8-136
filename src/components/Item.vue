@@ -56,6 +56,6 @@
 </script>
 
 <style scoped>
-@import '../style.css';
+@import '../css/style.css';
     
 </style>
