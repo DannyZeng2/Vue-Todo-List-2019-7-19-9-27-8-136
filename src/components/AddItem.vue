@@ -1,10 +1,10 @@
 <template>
-    <div style="margin: 0 auto;width: 400px;">
-        <div style="float:left;display:block">Vue To Do List</div>
-        <div style="float:left;display:block">Simple Todo List with adding and filter by diff status.</div>
+    <div style="margin: 0 auto;width: 500px;">
+        <div id = "div1">Vue To Do List</div>
+        <div id = "div1">Simple Todo List with adding and filter by diff status.</div>
         <div>
-        <input v-model="msg" type="text" name="additem" style="float:left">
-        <button @click="add" style="float:left">add</button>
+        <input v-model="msg" type="text" name="additem">
+        <button name = "add" @click="add">add</button>
         </div>
     </div>
 </template>
@@ -23,4 +23,5 @@
 </script>
 
 <style scoped>
+  @import '../style.css';
 </style>
