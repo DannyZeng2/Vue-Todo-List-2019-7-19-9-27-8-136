@@ -1,3 +1,66 @@
-.finishItem{
+.changeCheckbox{
     text-decoration:line-through
 }
+
+.rootdiv{
+    text-align: left;
+    padding:10px 10px 10px 20px;
+    width:430px;
+    border-radius:10px;
+    -moz-border-radius:25px;
+    margin:0 auto;
+    margin-top:10px;
+}
+
+#addBtn{
+    color: white;
+    font-size: 15px;
+    border-radius:10px;
+    border: none;
+    width:60px;
+    height:38px;
+    background-color: rgba(240, 99, 17, 0.897);
+}
+#additem{
+    width:350px;
+    height:30px;
+  
+}
+
+.itemstatus{
+    text-align: right;
+}
+
+.item{
+    padding:5px 0px;
+}
+
+p{
+    line-height:0px;
+    font-size: 30px;
+    font-weight:800 ;
+}
+
+i{
+    font-weight:600;
+}
+
+span{
+    font-weight:500 ;
+}
+
+
+.checkbox {
+    height: 15px;
+    width: 15px; 
+    background-color: aqua;
+}
+
+.btnState {
+    border: none;
+    background-color: white;
+    outline-color:rgba(241, 167, 97, 0.952);
+    font-weight:600 ;
+    font-size: 15px;
+    color:  rgba(247, 121, 48, 0.897);
+} 

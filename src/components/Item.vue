@@ -3,7 +3,8 @@
         <div v-for="item in items" :key="item">
             <div v-if="status==='All'||status==='Active'&&item.active===false||status==='Complete'&&item.active===true" class="item">
 
-                {{item.id}}.<input type="checkbox" v-model="item.active"/>
+                <span>{{item.id}}. </span>
+                <input type="checkbox" class="checkbox" v-model="item.active"/>
 
                 <label :class="{finishItem:item.active}" @dblclick="editItem(item.id,item.name)">
                     <span v-if="!item.isEdit">{{item.name}}</span>
@@ -15,7 +16,8 @@
             </div>
         </div>
         <br/>
-        <div class="itemstatus">
+
+        <div class="itemstatus" >
             <button class="btnState" @click="changeStatus('All')" >All</button>&nbsp;&nbsp;
             <button class="btnState" @click="changeStatus('Active')" >Active</button>&nbsp;&nbsp;
             <button class="btnState" @click="changeStatus('Complete')" >Complete</button>
