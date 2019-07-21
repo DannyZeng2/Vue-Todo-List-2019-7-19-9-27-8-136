@@ -1,27 +1,33 @@
 <template>
-    <div style="margin: 0 auto;width: 500px;">
-        <div id = "div1">Vue To Do List</div>
-        <div id = "div1">Simple Todo List with adding and filter by diff status.</div>
+    <div>
         <div>
-        <input v-model="msg" type="text" name="additem">
-        <button name = "add" @click="add">add</button>
+        <input id="additem" v-model="todoItem" type="text">
+        <button id="addBtn" @click="add">Add</button>
         </div>
     </div>
 </template>
 
 <script>
+    import itemList from './ItemList';
     export default {
         name: "AddItem",
         data(){
             return {
+                todoItem:""
                
             }
         },
         methods:{
+                add(){
+                    let id = itemList.items.length+1;
+                    let objs={"id":id,"name":this.todoItem,"active":false,"editFlag":true};
+                    itemList.items.push(objs);
+                    this.todoItem="";
+                }
         }
     }
 </script>
 
 <style scoped>
-  @import '../style.css';
+
 </style>
