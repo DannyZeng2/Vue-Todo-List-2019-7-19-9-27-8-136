@@ -5,19 +5,20 @@
       <i >Simple Todo List with adding and filter by diff status</i>
       <br/><br/>
       <AddItem></AddItem>
-      <Item></Item>
+      <Items></Items>
+      
     </div>
   </div>
 </template>
 
 <script>
 import AddItem from "./components/AddItem";
-import Item from "./components/Item";
+import Items from "./components/Items";
 export default {
   name: 'app',
   components: {
       AddItem,
-      Item
+      Items
   }
 }
 </script>
