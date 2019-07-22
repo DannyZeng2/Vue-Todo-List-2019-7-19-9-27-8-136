@@ -6,7 +6,7 @@
     <span>{{item.id}}.</span>
     <input type="checkbox" class="checkbox" v-model="item.active" />
 
-    <label :class="{finishItem:item.active}" @dblclick="editItem(item.id,item.name)">
+    <label :class="{finishItem:item.active}" @dblclick="editItem(item.id)">
       <span v-if="!item.isEdit">{{item.name}}</span>
       <span v-else>
         <input v-model="item.name" type="text" @keyup.enter="finishEdit(item.id)" />
@@ -24,7 +24,7 @@ export default {
     return {};
   },
   methods: {
-    editItem(id, name) {
+    editItem(id) {
       this.items[id - 1].isEdit = true;
     },
 

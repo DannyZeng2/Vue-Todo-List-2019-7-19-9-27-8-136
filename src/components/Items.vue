@@ -1,45 +1,39 @@
 <template>
     <div>
         <div v-for="item in items" :key="item.id">
-    
             <TodoItem :item="item" :items="items" :status="status"></TodoItem>
-            
         </div>
         <br/>
 
-        <div class="itemstatus" >
-            <button class="btnState" @click="changeStatus('All')" >All</button>&nbsp;&nbsp;
-            <button class="btnState" @click="changeStatus('Active')" >Active</button>&nbsp;&nbsp;
-            <button class="btnState" @click="changeStatus('Complete')" >Complete</button>
-        </div>
-
         
+ 
     </div>
 </template>
 
 <script>
+    //import Footer from './Footer';
     import itemList from './ItemList';
     import TodoItem from './TodoItem';
     export default {
         name: "Items",
+        props:["status"],
         components:{
-            TodoItem
+            TodoItem,
+           // Footer
         },
         data(){
             return {
                 items:itemList.items,
-                status:itemList.status
+               // status:itemList.status
                
             }
         },
         
-        methods: {
-
-            changeStatus(state) {
-                this.status=state;
-                itemList.status=state;
-            }
-        }
+        // methods: {
+        //     getStatusFormFooter(data){
+        //         this.status = data
+        //     }
+        // }
     }
 </script>
 
