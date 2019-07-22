@@ -8,7 +8,6 @@
 </template>
 
 <script>
-//import itemList from "./ItemList";
 export default {
   name: "Header",
   data() {

@@ -11,10 +11,8 @@
 import TodoItem from "./TodoItem";
 export default {
   name: "Items",
- // props: ["status"],
   components: {
     TodoItem
-    // Footer
   },
   data() {
     return {

@@ -31,7 +31,7 @@ export default new Vuex.Store({
         add(state,todoItem) {
             var id = state.items.length + 1;
             var newItems = { id: id, name:todoItem, active: false, isEdit: false };
-           state.items.push(newItems);
+            state.items.push(newItems);
             
             
         },

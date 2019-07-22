@@ -19,19 +19,18 @@
 export default {
   name: "TodoItem",
   props: ["item"],
-    computed: {
+  computed: {
     status() {
       return this.$store.getters.getStatus;
     }
   },
   methods: {
     editItem(id) {
-       this.$store.commit("editItem",id);
-     },
-
+      this.$store.commit("editItem", id);
+    },
 
     finishEdit(id) {
-      this.$store.commit("finishEdit",id);
+      this.$store.commit("finishEdit", id);
     }
   }
 };
