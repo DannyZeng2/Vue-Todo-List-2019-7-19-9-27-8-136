@@ -5,7 +5,7 @@
         <p>Vue.js To Do List</p>
         <i >Simple Todo List with adding and filter by diff status</i>
         <br/><br/>
-        <AddItem></AddItem>
+        <Header></Header>
         <Items></Items>
       </div>
     </div>
@@ -13,12 +13,12 @@
 </template>
 
 <script>
-import AddItem from "./components/AddItem";
+import Header from "./components/Header";
 import Items from "./components/Items";
 export default {
   name: 'app',
   components: {
-      AddItem,
+      Header,
       Items
   }
 }

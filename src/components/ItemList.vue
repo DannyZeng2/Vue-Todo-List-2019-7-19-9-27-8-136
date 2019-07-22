@@ -1,14 +1,13 @@
 <template>
-<div></div>
+  <div></div>
 </template>
 
 <script>
-    export default {
-        name: "itemList",
-        items:[
-        ],
-        status: "All"
-    }
+export default {
+  name: "itemList",
+  items: [],
+  status: "All"
+};
 </script>
 
 <style scoped>
