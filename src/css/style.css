@@ -1,3 +1,13 @@
+.outerdiv{
+    padding:10px 10px 20px 10px;
+    width:480px;
+    border-radius:5px;
+    -moz-border-radius:15px;
+    margin:0 auto;
+    margin-top:10px;
+    background-color:lightgray
+}
+
 .rootdiv{
     text-align: left;
     padding:10px 10px 10px 20px;
@@ -6,6 +16,7 @@
     -moz-border-radius:25px;
     margin:0 auto;
     margin-top:10px;
+    background-color: white
 }
 
 #addBtn{
@@ -15,7 +26,7 @@
     border: none;
     width:60px;
     height:38px;
-    background-color: rgba(240, 99, 17, 0.897);
+    background-color: #fc999a;
 }
 #additem{
     width:350px;
@@ -54,14 +65,13 @@ span{
 .checkbox {
     height: 15px;
     width: 15px; 
-    background-color: aqua;
 }
 
 .btnState {
     border: none;
     background-color: white;
-    outline-color:rgba(241, 167, 97, 0.952);
+    outline-color:#fc999a;
     font-weight:600 ;
     font-size: 15px;
-    color:  rgba(247, 121, 48, 0.897);
+    color: #fc999a;
 } 

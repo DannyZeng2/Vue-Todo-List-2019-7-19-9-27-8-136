@@ -1,12 +1,13 @@
 <template>
   <div id="app">
-    <div class="rootdiv">
-      <p>Vue.js To Do List</p>
-      <i >Simple Todo List with adding and filter by diff status</i>
-      <br/><br/>
-      <AddItem></AddItem>
-      <Items></Items>
-      
+    <div class="outerdiv">
+      <div class="rootdiv">
+        <p>Vue.js To Do List</p>
+        <i >Simple Todo List with adding and filter by diff status</i>
+        <br/><br/>
+        <AddItem></AddItem>
+        <Items></Items>
+      </div>
     </div>
   </div>
 </template>

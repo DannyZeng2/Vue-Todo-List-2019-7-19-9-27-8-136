@@ -38,14 +38,7 @@
             changeStatus(state) {
                 this.status=state;
                 itemList.status=state;
-            },
-            // editItem(id,name){
-            //     this.items[id-1].isEdit=true;
-            // },
-
-            // finishEdit(id){
-            //     this.items[id-1].isEdit=false;
-            // }
+            }
         }
     }
 </script>
