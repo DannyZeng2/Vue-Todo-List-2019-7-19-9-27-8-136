@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import itemList from "./ItemList";
+//import itemList from "./ItemList";
 export default {
   name: "Header",
   data() {
@@ -17,12 +17,11 @@ export default {
     };
   },
   methods: {
-    add() {
-      let id = itemList.items.length + 1;
-      let items = { id: id, name: this.todoItem, active: false, isEdit: false };
-      if (this.todoItem != "") {
-        itemList.items.push(items);
+    add(todoItem) {
+      if (this.todoItem == undefined || this.todoItem == "") {
+        return;
       }
+      this.$store.commit("add", this.todoItem);
       this.todoItem = "";
     }
   }

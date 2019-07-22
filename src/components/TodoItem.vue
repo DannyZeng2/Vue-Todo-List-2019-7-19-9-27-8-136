@@ -16,20 +16,22 @@
 </template>
 
 <script>
-import itemList from "./ItemList";
 export default {
   name: "TodoItem",
-  props: ["item", "items", "status"],
-  data() {
-    return {};
+  props: ["item"],
+    computed: {
+    status() {
+      return this.$store.getters.getStatus;
+    }
   },
   methods: {
     editItem(id) {
-      this.items[id - 1].isEdit = true;
-    },
+       this.$store.commit("editItem",id);
+     },
+
 
     finishEdit(id) {
-      this.items[id - 1].isEdit = false;
+      this.$store.commit("finishEdit",id);
     }
   }
 };

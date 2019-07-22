@@ -6,9 +6,9 @@
         <i>Simple Todo List with adding and filter by diff status</i><br/><br />
 
         <Header></Header>
-        <Items :status="status"></Items>
-        <Footer @func="getStatusFormFooter"></Footer>
-        
+        <Items></Items>
+        <Footer></Footer>
+
       </div>
     </div>
   </div>
@@ -18,7 +18,6 @@
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Items from "./components/Items";
-import itemList from "./components/ItemList";
 
 export default {
   name: "app",
@@ -27,16 +26,6 @@ export default {
     Items,
     Footer
   },
-  data() {
-    return {
-      status: itemList.status
-    };
-  },
-  methods: {
-    getStatusFormFooter(data) {
-      this.status = data;
-    }
-  }
 };
 </script>
 

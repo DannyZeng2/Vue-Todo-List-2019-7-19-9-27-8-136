@@ -7,20 +7,20 @@
 </template>
 
 <script>
-import itemList from "./ItemList";
+
 export default {
   name: "Footer",
   data() {
     return {
-      status:itemList.status
+    
     };
   },
 
   methods: {
-    sendStatus(state) {
-      this.status=state;
-      this.$emit('func',this.status);
+    sendStatus(flag) {
+        this.$store.commit("sendStatus",flag);
     }
+
   }
 };
 </script>
