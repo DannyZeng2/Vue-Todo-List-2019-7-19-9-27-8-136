@@ -20,7 +20,7 @@
 }
 .odd-item{
     padding:5px 0px;
-    background-color: lightgray;
+    background-color: #f4ecec;
 }
 .even-item{
     padding:5px 0px;
@@ -44,6 +44,7 @@
 
 .finishItem{
     text-decoration:line-through;
+    color:grey
 }
 
 
