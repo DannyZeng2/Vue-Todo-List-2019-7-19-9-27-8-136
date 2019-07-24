@@ -4,7 +4,7 @@
     :class="[contains(items, item)%2===1?'odd-item':'even-item']"
   >
     <span>{{contains(items, item)+1}}.</span>
-    <a-checkbox v-model="item.active" />
+    <a-checkbox v-model="item.active"/>
 &nbsp;
     <label :class="{finishItem:item.active}" @dblclick="editItem(item.id)">
       <span v-if="!item.isEdit">{{item.name}}</span>
@@ -35,10 +35,12 @@ export default {
 
     finishEdit(id) {
       this.$store.commit("finishEdit", id);
+      //this.$store.dispatch("updateTodo", id);
     },
 
     deleteItem(id) {
       this.$store.commit("remove", id);
+      //this.$store.dispatch("deleteTodo", id);
     },
     contains(arrays, obj) {
       var i = arrays.length;

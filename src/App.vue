@@ -26,6 +26,14 @@ export default {
     Items,
     Footer
   },
+  created(){
+    this.initData();
+  },
+  methods:{
+    initData(){
+       this.$store.dispatch('init');
+    }
+  }
 };
 </script>
 

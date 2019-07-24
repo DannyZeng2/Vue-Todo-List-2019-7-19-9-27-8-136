@@ -17,10 +17,12 @@ export default {
     };
   },
   methods: {
+
     add() {
       if (this.todoItem == undefined || this.todoItem == "") {
         return;
       }
+      //this.$store.dispatch("addTodoItem", this.todoItem);
       this.$store.commit("add", this.todoItem);
       this.todoItem = "";
     }
