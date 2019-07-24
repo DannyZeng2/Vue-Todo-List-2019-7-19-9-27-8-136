@@ -10,13 +10,21 @@
 
 .rootdiv{
     text-align: left;
-    padding:10px 10px 10px 20px;
-    width:430px;
+    padding:30px 10px 10px 20px;
+    width:450px;
     border-radius:10px;
     -moz-border-radius:25px;
     margin:0 auto;
     margin-top:10px;
     background-color: white
+}
+.odd-item{
+    padding:5px 0px;
+    background-color: lightgray;
+}
+.even-item{
+    padding:5px 0px;
+    background-color: white;
 }
 
 #addBtn{
@@ -25,7 +33,7 @@
     border-radius:10px;
     border: none;
     width:60px;
-    height:38px;
+    height:33px;
     background-color: #fc999a;
 }
 #additem{

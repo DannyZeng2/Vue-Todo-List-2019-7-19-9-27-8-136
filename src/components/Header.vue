@@ -1,9 +1,10 @@
 <template>
   <div>
     <div>
-      <input id="additem" v-model="todoItem" type="text" />&nbsp;
-      <button id="addBtn" @click="add">Add</button>
+      <a-input id="additem" v-model="todoItem" type="text" />&nbsp;
+      <a-button id="addBtn" @click="add">Add</a-button>
     </div>
+    <br/>
   </div>
 </template>
 
@@ -16,7 +17,7 @@ export default {
     };
   },
   methods: {
-    add(todoItem) {
+    add() {
       if (this.todoItem == undefined || this.todoItem == "") {
         return;
       }
