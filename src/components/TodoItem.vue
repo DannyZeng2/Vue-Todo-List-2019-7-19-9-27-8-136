@@ -1,8 +1,8 @@
 <template>
-  <div
+  <div 
     v-if="status==='All'||status==='Active'&&item.active===false||status==='Complete'&&item.active===true"
-    :class="[contains(items, item)%2===1?'odd-item':'even-item']"
-  >
+    :class="[contains(items, item)%2===1?'odd-item':'even-item']" style="padding-right:20px;">
+
     <span>{{contains(items, item)+1}}.</span>
     <a-checkbox v-model="item.active"/>
 &nbsp;
@@ -12,7 +12,10 @@
         <input v-model="item.name" type="text" @keyup.enter="finishEdit(item.id)" />
       </span>
     </label>
-    <a-icon type="close" style="float:right" @click="deleteItem(contains(items, item))" />
+    <a-popconfirm title="是否确定删除?" @confirm="deleteItem" okText="是" cancelText="否">   
+
+      <a-icon type="delete" style="float:right"/>
+    </a-popconfirm>
   </div>
 </template>
 
@@ -42,6 +45,7 @@ export default {
       this.$store.commit("remove", id);
       //this.$store.dispatch("deleteTodo", id);
     },
+
     contains(arrays, obj) {
       var i = arrays.length;
       while (i--) {
