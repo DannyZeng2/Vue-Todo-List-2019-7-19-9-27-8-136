@@ -25,7 +25,8 @@ export default {
   methods: {
 
     add() {
-      if (this.todoItem == undefined || this.todoItem == "") {
+      if (this.todoItem.trim() == "") {
+        this.$message.error('请输入文字');
         return;
       }
 
